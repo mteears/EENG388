@@ -37,13 +37,13 @@ rf_tails = tails/int(num)
 print("\nRelative Freq. of Heads:  ",rf_heads)
 print("Relative Freq. of Tails:  ",rf_tails)  
 
-lab = ['Heads', 'Tails']
-count = [heads, tails]
+lab = ['Rel. Freq Heads', 'Rel. Freq Tails', 'P[H]', 'P[T]']
+count = [heads/int(num), tails/int(num), 0.5, 0.5]
 y_pos = np.arange(len(lab))
 
 plt.bar(y_pos, count, align='center', alpha=0.5)
 plt.xticks(y_pos, lab)
-plt.ylabel('Count')
+plt.ylabel('Probability')
 plt.title('Relative Frequency of Coin Toss')
 
 plt.show()

@@ -49,3 +49,13 @@ for i in range(0,11):
 
 print(count)
 print(pmf)
+
+lab = ['0','1','2','3','4','5','6','7','8','9','10']
+y_pos = np.arange(len(lab))
+
+plt.bar(y_pos, pmf, align='center', alpha=0.5)
+plt.xticks(y_pos, lab)
+plt.ylabel('Probability')
+plt.title('Binomial Probability for n=10, p=0.5, Teears')
+
+plt.show()

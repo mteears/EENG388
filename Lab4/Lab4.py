@@ -33,22 +33,22 @@ print("Course: EENG388")
 print("Lab #03: Binomial Probability Distribution")
 
 
-for i in range(0,10):
+for i in range(0, 10):
     Count.append(i+1)
 
-X1 = stats.uniform(0,10)
-X2 = stats.binom(10, 0.5)
+X1 = stats.uniform(0, 10)
+X2 = stats.binom(10, 0.9)
 X3 = stats.geom(0.5)
 
-for i in range(0,10):
+for i in range(0, 10):
     X_Uniform.append(X1.rvs())
     X_Binomial.append(X2.rvs())
     X_Geometric.append(X3.rvs())
 
-for i in range(0,10000):
+for i in range(0, 10000):
     PMF_X_Uniform.append(np.math.floor(X1.rvs()))
 PMF_X_Uniform.sort()
-for i in range(0,10):
+for i in range(0, 10):
     Uniform_Count.append(countx(PMF_X_Uniform,i)/10000)
 
 # for i in range(0,10000):
